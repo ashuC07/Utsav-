@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTSAV 2026 | Picture Abhi Baaki Hai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" href="index.html" class="nav-logo" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intercollegiate.html">Intercollegiate</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+    
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-right">
+        <img src="CLogo.png" href="index.html" class="nav-logo" alt="Logo">
+    </div>
+</nav>
+</header>
+
+    <header class="hero">
+        <img src="char1.png" class="cartoon-character char-left" alt="Cartoon Character">
+        <img src="char3.png" class="cartoon-character char-right" alt="Cartoon Character">
+
+        <div class="hero-content">
+            <h1>BLOCKBUSTER <span class="highlight">ENTERTAINMENT</span></h1>
+            <p>Welcome to the most DRAMATIC fest of the year!</p>
+            <div class="cta-buttons">
+                <a href="event.html" class="btn primary">Showtime!</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDZrPfpWGQUhe84p6Gjje__MLuQEuMUSqFKpW5QnNgc6wcw/viewform" class="btn secondary">Ticket Le Lo</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="highlights">
+        <h2>HOUSEFULL EVENTS</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Dance!</h3>
+                <p>Rhythm, energy, electrifying performance. </p>
+                <p>(15th March)</p>
+            </div>
+            <div class="card">
+                <h3>Drama!</h3>
+                <p>Theatre, emotions, and powerful stage performance.</p>
+                <p>(14th March)</p>
+            </div>
+            <div class="card">
+                <h3>Music!</h3>
+                <p>Melodies, beats, and soulful vibes.</p>
+                <p>(14th March)</p>
+            </div>
+            <div class="card">
+                <h3>Face Painting!</h3>
+                <p>Colors, creativity, and artistic expression.</p>
+                <p>(15th March)</p>
+            </div>
+        </div>
+    </section>
+        <script>    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });</script>
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img src="logo.png" alt="UTSAV Logo" class="footer-logo">
+            <h3>UTSAV 2026</h3>
+            <p>SGGSIE&T, Nanded</p>
+        </div>
+
+        <div class="footer-center">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="intercollegiate.html">Intercollegiate</a>
+            <a href="event.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="team.html">Team</a>
+        </div>
+
+        <div class="footer-right">
+            <h4>Contact</h4>
+            <p>📍 SGGSIE&T, Nanded</p>
+            <p>📧 utsav@sggs.ac.in</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 UTSAV • Designed by <span>ASHUTOSH CHANDGUDE</span>
+    </div>
+</footer>
+
+</body>
+</html>

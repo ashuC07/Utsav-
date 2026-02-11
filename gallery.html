@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UTSAV 2026 | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" href="index.html" class="nav-logo" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intercollegiate.html">Intercollegiate</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+    
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-right">
+        <img src="CLogo.png" href="index.html" class="nav-logo" alt="Logo">
+    </div>
+</nav>
+</header>
+
+<section class="gallery-hero">
+  <h1>GALLERY</h1>
+  <p>Moments. Memories. Magic.</p>
+</section>
+
+<section id="gallery" class="gallery-grid"></section>
+
+<div class="loader">Loading more moments…</div>
+
+<script src="gallery.js"></script>
+<script>
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
+</script>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img src="logo.png" alt="UTSAV Logo" class="footer-logo">
+            <h3>UTSAV 2026</h3>
+            <p>SGGSIE&T, Nanded</p>
+        </div>
+
+        <div class="footer-center">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="intercollegiate.html">Intercollegiate</a>
+            <a href="event.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="team.html">Team</a>
+        </div>
+
+        <div class="footer-right">
+            <h4>Contact</h4>
+            <p>📍 SGGSIE&T, Nanded</p>
+            <p>📧 utsav@sggs.ac.in</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 UTSAV • Designed by <span>ASHUTOSH CHANDGUDE</span>
+    </div>
+</footer>
+</body>
+</html>
